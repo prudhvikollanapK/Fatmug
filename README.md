@@ -56,6 +56,12 @@ The project provides the following API endpoints:
 - Vendor Performance Evaluation:
 - `GET /api/vendors/{vendor_id}/performance/`: Retrieve a vendor's performance metrics.
 
+## Postman APIs
+
+For easier interaction with the APIs, you can use the provided Postman collection. Import the collection into Postman to access the following APIs:
+
+- Fatmug Vendor Management System APIs: [FATMUG.postman_collection.json]
+
 ## Contributing
 
 Contributions to the project are welcome! If you'd like to contribute, please fork the repository, make your changes, and submit a pull request. Please ensure that your code follows PEP 8 style guidelines and includes appropriate tests.
