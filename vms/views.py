@@ -1,5 +1,3 @@
-# views.py
-
 from rest_framework import generics
 from rest_framework.response import Response
 from .models import Vendor, PurchaseOrder, HistoricalPerformance
