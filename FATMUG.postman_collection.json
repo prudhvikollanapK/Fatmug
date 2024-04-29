@@ -1,0 +1,574 @@
+{
+	"info": {
+		"_postman_id": "4d481241-1889-4de8-9e8e-8f7eaa663ff1",
+		"name": "FATMUG",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19888139",
+		"_collection_link": "https://warped-moon-54737.postman.co/workspace/New-Team-Workspace~7a2737cf-7ab0-442d-ae17-e2c677110567/collection/19888139-4d481241-1889-4de8-9e8e-8f7eaa663ff1?action=share&source=collection_link&creator=19888139"
+	},
+	"item": [
+		{
+			"name": "Vendor",
+			"item": [
+				{
+					"name": "Create Vendor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Prudhvi Kollana\",\n    \"contact_details\": \"7569875288\",\n    \"address\": \"Hyderabad\",\n    \"vendor_code\": \"PK123\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/vendors/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vendors",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get specific vendor",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/vendors/4/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vendors",
+								"4",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Vendor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Prudhvi Kollana\",\n    \"contact_details\": \"7569875288\",\n    \"address\": \"Visakhapatnam\",\n    \"vendor_code\": \"PK123\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/vendors/4/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vendors",
+								"4",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List of vendors",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/vendors/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vendors",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Vendor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/vendors/2/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vendors",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Purchase Order",
+			"item": [
+				{
+					"name": "Create PO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"po_number\": \"PO99\",\n    \"vendor\": 4,\n    \"order_date\": \"2024-04-30T10:00:00\",\n    \"delivery_date\": \"2024-05-15T10:00:00\",\n    \"items\": [{\"name\": \"Item 1\", \"quantity\": 5}, {\"name\": \"Item 2\", \"quantity\": 10}],\n    \"quantity\": 15,\n    \"status\": \"pending\",\n    \"issue_date\": \"2024-04-30T10:00:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/purchase_orders/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"purchase_orders",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get specific PO",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/purchase_orders/3/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"purchase_orders",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update PO",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"po_number\": \"UpdatedPO123\",\n    \"vendor\": 4,\n    \"order_date\": \"2024-04-30T10:00:00\",\n    \"delivery_date\": \"2024-05-20T10:00:00\",\n    \"items\": [{\"name\": \"Updated Item 1\", \"quantity\": 8}, {\"name\": \"Updated Item 2\", \"quantity\": 12}],\n    \"quantity\": 20,\n    \"status\": \"completed\",\n    \"quality_rating\": 4.5,\n    \"acknowledgment_date\": \"2024-05-01T10:00:00\",\n    \"issue_date\": \"2024-04-30T10:00:00\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/purchase_orders/3/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"purchase_orders",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List of POs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/purchase_orders/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"purchase_orders",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete PO",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/purchase_orders/1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"purchase_orders",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Historical Performance Report",
+			"item": [
+				{
+					"name": "Create a New Historical Performance Record",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"vendor\": 4,\n    \"date\": \"2024-04-30T10:00:00\",\n    \"on_time_delivery_rate\": 95.0,\n    \"quality_rating_avg\": 4.5,\n    \"average_response_time\": 24.5,\n    \"fulfillment_rate\": 98.0\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/historical_performance/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"historical_performance",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get specific historical performance report",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/historical_performance/3/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"historical_performance",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update historical performance report",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"vendor\": 4,\n    \"date\": \"2024-05-01T10:00:00\",\n    \"on_time_delivery_rate\": 97.0,\n    \"quality_rating_avg\": 4.7,\n    \"average_response_time\": 23.0,\n    \"fulfillment_rate\": 99.0\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/historical_performance/3/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"historical_performance",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List of historical performance reports",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/historical_performance/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"historical_performance",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete historical performance report",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/historical_performance/2/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"historical_performance",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Performance Metrics",
+			"item": [
+				{
+					"name": "Vendor Performance Metrics",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/vendors/4/performance/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vendors",
+								"4",
+								"performance",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Acknowledge a Purchase Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Vendor\",\n    \"contact_details\": \"Contact details of the vendor\",\n    \"address\": \"Vendor's address\",\n    \"vendor_code\": \"UniqueVendorCode\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/purchase_orders/2/acknowledge",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"purchase_orders",
+								"2",
+								"acknowledge"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
